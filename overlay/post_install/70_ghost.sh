@@ -21,7 +21,7 @@ HOST=`sysrc -n hostname`
 # create config file
 ghost install --db mysql --no-prompt --no-stack --no-setup
 ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db mysql \
-  --dbhost=127.0.0.1 --dbuser=${USER} --dbpass=${PASS} --dbname=ghost \
+  --dbhost=127.0.0.1 --dbuser=${USER} --dbpass=${PASS} --dbname=${DB} \
   --url https://${HOST}
 
 # Configure

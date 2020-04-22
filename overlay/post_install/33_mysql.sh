@@ -5,8 +5,8 @@ service mysql-server start
 sleep 5
 
 # MySQL Configuration
-USER="gitea"
-DB="gitea"
+USER="ghost"
+DB="ghost"
 export LC_ALL=C
 PASS=`head /dev/urandom | tr -dc A-Za-z0-9 | head -c 25`
 

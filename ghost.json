@@ -11,12 +11,10 @@
     "bpf": "yes"
   },
   "pkgs": [
-    "lang/python3",
     "graphics/vips",
-    "databases/sqlite3",
     "www/node10",
     "www/npm-node10",
-    "mysql57-server"
+    "databases/mysql57-server"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
