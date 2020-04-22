@@ -12,6 +12,7 @@
   },
   "pkgs": [
     "graphics/vips",
+    "www/nginx",
     "www/node10",
     "www/npm-node10",
     "databases/mysql57-server"
