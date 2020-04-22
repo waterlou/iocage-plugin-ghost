@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# PROVIDE: ghost
+# KEYWORD: shutdown
+PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin"
+
+. /etc/rc.subr
+
+name="ghost"
+rcvar="ghost_enable"
+extra_commands="status"
+
+load_rc_config ghost
+: ${ghost_enable:="NO"}
+
+status_cmd="ghost_status"
+start_cmd="ghost_start"
+stop_cmd="ghost_stop"
+restart_cmd="ghost_restart"
+
+DIR="/usr/local/share/ghost"
+
+ghost_start() {
+  cd ${DIR} && ghost start
+}
+
+ghost_stop() {
+  cd ${DIR} && ghost stop
+}
+
+ghost_status() {
+  ghost ls
+}
+
+ghost_restart() {
+  cd ${DIR} && ghost restart
+}
+
+run_rc_command "$1"
