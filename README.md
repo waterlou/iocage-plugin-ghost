@@ -40,6 +40,9 @@ TODO:
     Setup Letsencrypt
 
 
+TODO:
+    Check why use https in config cause endless loop
+     
 # Settings
 
 Ghost is stored in:

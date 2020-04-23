@@ -27,6 +27,7 @@ ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db mysql \
   --dbhost=localhost --dbuser=${USER} --dbpass=${PASS} --dbname=${DB} \
   --url https://${HOST}.local
 ghost config set database.connection.socketPath /tmp/mysql.sock
+ghost config set process local
 
 # Configure
 # sysrc ghost_enable=yes
