@@ -22,17 +22,14 @@ PASS=`sysrc -f ${CFG} -n mysql_pass`
 HOST=`sysrc -n hostname`
 
 # create config file
-ghost install --db mysql --no-prompt --no-stack --no-setup \
-  --dbhost=localhost --dbuser=${USER} --dbpass=${PASS} --dbname=${DB} 
+ghost install --db mysql --no-prompt --no-stack --no-setup
 ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db mysql \
   --dbhost=localhost --dbuser=${USER} --dbpass=${PASS} --dbname=${DB} \
-  --url https://${HOST}
+  --url https://${HOST}.local
+ghost config set database.connection.socketPath /tmp/mysql.sock
 
 # Configure
-sysrc ghost_enable=yes
+# sysrc ghost_enable=yes
 
 # Start service
 service ghost start
-
-# Cleanup
-npm cache clean --force

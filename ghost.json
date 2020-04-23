@@ -11,11 +11,12 @@
     "bpf": "yes"
   },
   "pkgs": [
-    "graphics/vips",
     "www/nginx",
     "www/node10",
     "www/npm-node10",
-    "databases/mysql57-server"
+    "graphics/vips",
+    "databases/mysql57-server",
+    "security/py-certbot-nginx"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
