@@ -29,6 +29,8 @@ ghost config --ip 0.0.0.0 --port 2368 --no-prompt --db mysql \
 ghost config set database.connection.socketPath /tmp/mysql.sock
 ghost config set process local
 
+chown -R www:www ${GHOST_PATH}
+
 # Configure
 # sysrc ghost_enable=yes
 

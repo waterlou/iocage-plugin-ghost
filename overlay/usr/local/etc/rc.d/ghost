@@ -21,11 +21,11 @@ restart_cmd="ghost_restart"
 DIR="/usr/local/share/ghost"
 
 ghost_start() {
-  cd ${DIR} && ghost start
+  cd ${DIR} && su -m www -c 'ghost start'
 }
 
 ghost_stop() {
-  cd ${DIR} && ghost stop
+  cd ${DIR} && su -m www -c 'ghost stop'
 }
 
 ghost_status() {
@@ -33,7 +33,7 @@ ghost_status() {
 }
 
 ghost_restart() {
-  cd ${DIR} && ghost restart
+  cd ${DIR} && su -m www -c 'ghost restart'
 }
 
 run_rc_command "$1"
