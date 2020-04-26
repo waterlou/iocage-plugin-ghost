@@ -24,12 +24,9 @@ TODO:
     
     Setup Port forward in router
 
-To change this setting, run the following in the jail shell:
+To change this setting, run the following in the root shell:
 
-    cd /usr/local/share/ghost
-    ghost stop
-    ghost config set url http://mydomain.com
-    ghost start
+    iocage set -P url=http://192.168.1.208 ghost
 
 TODO:
 
