@@ -15,8 +15,7 @@
     "www/node10",
     "www/npm-node10",
     "graphics/vips",
-    "databases/mysql57-server",
-    "security/py37-certbot-nginx"
+    "databases/mysql57-server"
   ],
   "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
   "fingerprints": {
