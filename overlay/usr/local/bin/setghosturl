@@ -1,0 +1,37 @@
+#!/usr/local/bin/bash
+
+is_url() {
+  regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
+  string=$1
+  if [[ $string =~ $regex ]]
+  then
+      return 1
+  else
+      return 0
+  fi
+}
+
+GHOST_PATH=/usr/local/share/ghost
+
+cd ${GHOST_PATH}
+
+if [ $# -eq 0 ]; then
+
+  URL=`sysrc -n ghost_url`
+
+  if [ -z "${URL}" ]; then
+    ghost config set url "http://localhost:2368"
+  else
+    ghost config set url "${URL}"
+  fi
+
+fi
+
+if [ $# -eq 1 ]; then
+  checkurl=`is_url $1`
+  if [ $checkurl -eq 1 ]; then
+    sysrc ghost_url=$1
+  else
+    echo "$1 is not a valid url"
+  fi
+fi

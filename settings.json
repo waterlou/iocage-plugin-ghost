@@ -1,0 +1,13 @@
+{
+  "servicerestart":"service ghost restart",
+  "serviceget": "/usr/local/bin/ghostget",
+	"serviceset": "/usr/local/bin/ghostset",
+  "options": {
+    "url": {
+      "type": "string",
+      "name": "URL",
+      "description": "e.g. http://localhost",
+      "requirerestart": true
+    }
+  }
+}

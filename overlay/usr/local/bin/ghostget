@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Get configuration setting
+case $1 in
+    url) echo `sysrc ghost_url="http://localhost" | awk '/^ghost_url/ { print $2 }'`
+          ;;
+    *) echo "Unknown option">&2
+       exit 1
+       ;;
+esac

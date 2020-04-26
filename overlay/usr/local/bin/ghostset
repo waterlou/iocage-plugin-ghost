@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Set configuration option
+# Example use: sudo iocage set -P port=8443 url=http://localhost ghost
+
+give_message()
+{
+if [ $? -eq 0 ] ; then
+    echo "Changing /etc/mineos.conf"
+else
+    echo "Error updating /etc/mineos.conf">2 ; exit 1
+fi
+}
+
+case $1 in
+  url) sysrc ghost_url=$2
+    ;;
+  *) echo "Unknown option">&2 ; exit 1
+    ;;
+esac

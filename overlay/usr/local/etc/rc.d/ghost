@@ -21,7 +21,7 @@ restart_cmd="ghost_restart"
 DIR="/usr/local/share/ghost"
 
 ghost_start() {
-  cd ${DIR} && su -m www -c 'ghost start'
+  /usr/local/bin/setghosturl && cd ${DIR} && su -m www -c 'ghost start'
 }
 
 ghost_stop() {
