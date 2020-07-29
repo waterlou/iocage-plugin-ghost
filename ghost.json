@@ -1,6 +1,6 @@
 {
   "name": "ghost",
-  "release": "11.3-RELEASE",
+  "release": "12.1-RELEASE",
   "artifact": "https://github.com/waterlou/iocage-plugin-ghost.git",
   "properties": {
     "allow_mount_tmpfs": "1",
@@ -17,7 +17,7 @@
     "graphics/vips",
     "databases/mysql57-server"
   ],
-  "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/latest",
   "fingerprints": {
 		  "plugin-default": [
 				  {
